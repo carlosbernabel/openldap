@@ -1,0 +1,103 @@
+dn: cn={5}upeduperson-mail
+objectClass: olcSchemaConfig
+cn: {5}upeduperson-mail
+olcAttributeTypes:: ezB9KCAxLjMuNi4xLjQuMS4xMzY2Mi4xMC4xLjEgTkFNRSAnbGVnYWpvJy
+ BERVNDICdOw7ptZXJvIGRlIGxlZ2FqbyBzaXN0ZW1hIFBlb3BsZXNvZnQgKGVtcGxJRCknIEVRVUF
+ MSVRZIGNhc2VJZ25vcmVNYXRjaCBTVUJTVFIgY2FzZUlnbm9yZVN1YnN0cmluZ3NNYXRjaCBTWU5U
+ QVggMS4zLjYuMS40LjEuMTQ2Ni4xMTUuMTIxLjEuMTV7MTF9IFNJTkdMRS1WQUxVRSAp
+olcAttributeTypes:: ezF9KCAxLjMuNi4xLjQuMS4xMzY2Mi4xMC4xLjIgTkFNRSAnbGVnYWpvUH
+ JvZ3Jlc3MnIERFU0MgJ07Dum1lcm8gZGUgbGVnYWpvIHNpc3RlbWEgUHJvZ3Jlc3MgKGxlZ2Fqb19
+ hbHVtbm8sbGVnYWpvX2RvY2VudGUsbGVnYWpvX2VtcGxlYWRvKScgRVFVQUxJVFkgY2FzZUlnbm9y
+ ZU1hdGNoIFNVQlNUUiBjYXNlSWdub3JlU3Vic3RyaW5nc01hdGNoIFNZTlRBWCAxLjMuNi4xLjQuM
+ S4xNDY2LjExNS4xMjEuMS4xNXs3fSAp
+olcAttributeTypes: {2}( 1.3.6.1.4.1.13662.10.1.3 NAME 'uidPeoplesoft' DESC 'Us
+ er ID sistema Peoplesoft (operatorID)' EQUALITY caseIgnoreMatch SYNTAX 1.3.6.
+ 1.4.1.1466.115.121.1.15{8} SINGLE-VALUE )
+olcAttributeTypes: {3}( 1.3.6.1.4.1.13662.10.1.4 NAME 'documento' DESC 'Tipo y
+  numero de documento (pueden haber mas de uno)' EQUALITY caseIgnoreMatch SUBS
+ TR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{15} )
+olcAttributeTypes: {4}( 1.3.6.1.4.1.13662.10.1.5 NAME 'altaLdap' DESC 'Fecha d
+ e alta de la cuenta en el LDAP' EQUALITY caseIgnoreIA5Match SUBSTR caseIgnore
+ SubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+olcAttributeTypes: {5}( 1.3.6.1.4.1.13662.10.1.6 NAME 'ultimaModificacion' DES
+ C 'Fecha de ultima modificacion administrativa' EQUALITY caseIgnoreIA5Match S
+ UBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-V
+ ALUE )
+olcAttributeTypes: {6}( 1.3.6.1.4.1.13662.10.1.7 NAME 'aux1' EQUALITY caseIgno
+ reMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+ {255} )
+olcAttributeTypes: {7}( 1.3.6.1.4.1.13662.10.1.8 NAME 'activo' DESC 'Habilitad
+ o para identificar personas activas en ldap' EQUALITY booleanMatch SYNTAX 1.3
+ .6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+olcAttributeTypes: {8}( 1.3.6.1.4.1.13662.10.1.9 NAME 'communityMail' DESC 'ma
+ il para el envio de cartas entremiembros de la comunidad UP' EQUALITY caseIgn
+ oreIA5Match SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} SINGLE-VALUE )
+olcAttributeTypes: {9}( 1.3.6.1.4.1.13662.10.1.10 NAME 'birthDay' DESC 'fecha 
+ de nacimiento YYYYMMDDHHMM' EQUALITY generalizedTimeMatch SYNTAX 1.3.6.1.4.1.
+ 1466.115.121.1.24{16} SINGLE-VALUE )
+olcAttributeTypes: {10}( 1.3.6.1.4.1.13662.10.1.11 NAME 'academicCareer' DESC 
+ 'undergraduate, graduate, extension' EQUALITY caseIgnoreMatch SYNTAX 1.3.6.1.
+ 4.1.1466.115.121.1.15{15} )
+olcAttributeTypes: {11}( 1.3.6.1.4.1.13662.10.1.12 NAME 'lastLogin' DESC 'Fech
+ a de ultimo logueo al ldap' EQUALITY caseIgnoreIA5Match SUBSTR caseIgnoreSubs
+ tringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+olcAttributeTypes: {12}( 1.3.6.1.4.1.13662.10.1.14 NAME 'radiusAllowed' DESC '
+ Habilitado para autenticarse usando radius' EQUALITY booleanMatch SYNTAX 1.3.
+ 6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+olcAttributeTypes: {13}( 1.3.6.1.4.1.13662.10.1.15 NAME 'radiusPassword' DESC 
+ 'password for radius and PEAP - LDAP' EQUALITY octetStringMatch SYNTAX 1.3.6.
+ 1.4.1.1466.115.121.1.40{128} )
+olcAttributeTypes: {14}( 1.3.6.1.4.1.13662.10.1.16 NAME 'dateradiusPassword' D
+ ESC 'Fecha de alta de la cuenta en el LDAP' EQUALITY caseIgnoreIA5Match SUBST
+ R caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE
+  )
+olcAttributeTypes: {15}( 1.3.6.1.4.1.13662.10.1.17 NAME 'mailingExcluded' DESC
+  'Exceptuado de recibir mailing' EQUALITY booleanMatch SYNTAX 1.3.6.1.4.1.146
+ 6.115.121.1.7 SINGLE-VALUE )
+olcAttributeTypes: {16}( 1.3.6.1.4.1.13662.10.1.18 NAME 'institutionalAcct' DE
+ SC 'Esta es una cuenta institucional' EQUALITY booleanMatch SYNTAX 1.3.6.1.4.
+ 1.1466.115.121.1.7 SINGLE-VALUE )
+olcAttributeTypes: {17}( 1.3.6.1.4.1.13662.10.1.19 NAME 'institutionalResponsi
+ ble' DESC 'Uid del responsable de esta cuenta institucional' EQUALITY caseIgn
+ oreIA5Match SUBSTR caseIgnoreIA5SubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.1
+ 21.1.26{256} SINGLE-VALUE )
+olcAttributeTypes: {18}( 1.3.6.1.4.1.13662.10.1.20 NAME 'mailErrorAddress' DES
+ C 'this account has been disabled because of an error' EQUALITY caseIgnoreIA5
+ Match SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+olcAttributeTypes: {19}( 2.16.840.1.113730.3.1.13 NAME 'mailAlternateAddress' 
+ DESC 'alternate RFC 822 email address of this recipient' EQUALITY caseIgnoreI
+ A5Match SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+olcAttributeTypes: {20}( 2.16.840.1.113730.3.1.18 NAME 'mailHost' DESC 'fully 
+ qualified hostname of the SMTP MTA handles messages for this recipient' EQUAL
+ ITY caseIgnoreIA5Match SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} SINGLE-VALUE
+  )
+olcAttributeTypes: {21}( 2.16.840.1.113730.3.1.47 NAME 'mailRoutingAddress' DE
+ SC 'RFC 822 address to use when routing messages to the SMTP MTA of this reci
+ pient' EQUALITY caseIgnoreIA5Match SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} 
+ SINGLE-VALUE )
+olcAttributeTypes: {22}( 1.3.6.1.4.1.13662.10.1.22 NAME 'azureAllowed' DESC 'H
+ abilitado para usuarios con acceso a Microsoft' EQUALITY booleanMatch SYNTAX 
+ 1.3.6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+olcAttributeTypes: {23}( 2.16.840.1.113730.3.1.23 NAME 'zendeskId' DESC 'RFC27
+ 98: numerically identifies a person within zendesk platform' EQUALITY caseIgn
+ oreMatch SUBSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.1
+ 5 SINGLE-VALUE )
+olcObjectClasses:: ezB9KCAxLjMuNi4xLjQuMS4xMzY2Mi4xMC4yLjEgTkFNRSAndXBFZHVQZXJ
+ zb24nIERFU0MgJ01pZW1icm8gZGUgbGEgY29tdW5pZGFkIGFjYWTDqW1pY2EgVVAnIFNVUCBpbmV0
+ T3JnUGVyc29uIFNUUlVDVFVSQUwgTUFZICggbGVnYWpvICQgbGVnYWpvUHJvZ3Jlc3MgJCB1aWRQZ
+ W9wbGVzb2Z0ICQgZG9jdW1lbnRvICQgYWx0YUxkYXAgJCB1bHRpbWFNb2RpZmljYWNpb24gJCBhdX
+ gxICQgYWN0aXZvICQgY29tbXVuaXR5TWFpbCAkIGMgJCBiaXJ0aERheSAkIGFjYWRlbWljQ2FyZWV
+ yICQgbGFzdExvZ2luICQgcmFkaXVzQWxsb3dlZCAkIHJhZGl1c1Bhc3N3b3JkICQgZGF0ZXJhZGl1
+ c1Bhc3N3b3JkICQgbWFpbGluZ0V4Y2x1ZGVkICQgaW5zdGl0dXRpb25hbEFjY3QgJCBpbnN0aXR1d
+ GlvbmFsUmVzcG9uc2libGUgJCBtYWlsRXJyb3JBZGRyZXNzICQgYXp1cmVBbGxvd2VkICQgemVuZG
+ Vza0lkKSApCg==
+olcObjectClasses: {1}( 2.16.840.1.113730.3.2.3 NAME 'mailRecipient' DESC 'Mail
+  routing data' SUP top AUXILIARY MAY ( cn $ mail $ mailAlternateAddress $ mai
+ lHost $ mailRoutingAddress ) )
+structuralObjectClass: olcSchemaConfig
+entryUUID: cd0afcfa-c9de-1032-999f-2f7749b184dd
+creatorsName: cn=config
+createTimestamp: 20131015121227Z
+entryCSN: 20131015121227.048417Z#000000#000#000000
+modifiersName: cn=config
+modifyTimestamp: 20131015121227Z
